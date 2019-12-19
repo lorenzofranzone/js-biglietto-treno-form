@@ -262,6 +262,10 @@ table {
 }
 
     @media screen and (max-width: 992px) {
+      .details-name {
+        margin-right: 0px;
+      }
+
       table, thead, tbody, th, td, tr {
     		display: block;
     	}
@@ -287,11 +291,12 @@ table {
     	td:before {
     		/* Table Header */
     		position: absolute;
-        font-weight: 700;
+        font-weight: 900;
     		/* Top/left */
     		top: 0;
     		left: 6px;
-        font-size: .6em;
+        font-size: .55em;
+        text-transform: uppercase;
     	}
 
       /*
