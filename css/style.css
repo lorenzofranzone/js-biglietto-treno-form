@@ -66,15 +66,12 @@ body {
 }
 
 .hide {
-  transition: opacity 1s ease-out;
+  transition: opacity .15s ease-out;
   opacity: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 .show {
   opacity: 1;
-  height: auto;
 }
 
 /* //////////////////////////////////////////////////
