@@ -20,59 +20,56 @@
         <!-- Form Name -->
         <div class="form-name">
           <label for="input-name">Nome e Cognome</label>
-          <input type="text" name="input-name" value="" placeholder="Mario">
+          <input id="name" type="text" name="input-name" value="" placeholder="Inserisci il tuo nome">
         </div>
         <!-- Form Km -->
         <div class="form-km">
           <label for="input-km">Km da percorrere</label>
-          <input type="number" name="input-km" value="" placeholder="35">
+          <input id="km" type="number" name="input-km" value="" placeholder="Km da percorrere">
         </div>
         <!-- Form Age -->
         <div class="form-age">
           <label for="select-age">Fascia d'età</label>
-          <select name="select-age">
-            <option value="">Minorenne</option>
-            <option value="">Maggiorenne</option>
-            <option value="">Over 65</option>
+          <select id="age" name="select-age">
+            <option value="Minorenne">Minorenne</option>
+            <option value="Maggiorenne">Maggiorenne</option>
+            <option value="Over 65">Over 65</option>
           </select>
         </div>
         <div class="form-buttons">
-          <button class="btn btn-generate">Genera</button>
-          <button class="btn btn-reset">Annulla</button>
+          <button id="generate" class="btn btn-generate">Genera</button>
+          <button id="reset" class="btn btn-reset">Annulla</button>
         </div>
       </div> <!-- / Form -->
     </div> <!-- / Container Settings -->
 
     <!-- Ticket Print -->
-    <div class="container print">
+    <div id="generatedTicket" class="container print hide">
       <h2>Il tuo biglietto</h2>
       <div class="ticket">
         <h3>Dettaglio passeggeri</h3>
         <div class="details">
-          <div class="details-name debug1">
+          <div class="details-name">
             <h4>Nome passeggero</h4>
-            <p>Nome passeggero</p>
+            <p id="ticketUserName"></p>
           </div>
-          <div class="details-offer debug2">
+          <div class="details-offer">
             <table>
               <thead>
-                <th>Offerta</th>
-                <th>Carrozza</th>
-                <th>Codice CP</th>
-                <th>Costo biglietto</th>
+                <th><h4>Offerta</h4></th>
+                <th><h4>Carrozza</h4></th>
+                <th><h4>Codice CP</h4></th>
+                <th><h4>Costo biglietto</h4></th>
               </thead>
               <tbody>
                 <tr>
-                  <td>Biglietto</td>
-                  <td>Carrozza</td>
-                  <td>Codice</td>
-                  <td>Costo</td>
+                  <td><span id="ticketType"></span></td>
+                  <td><span id="ticketCarr"></span></td>
+                  <td><span id="ticketCode"></span></td>
+                  <td><span id="ticketPrice"></span></td>
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="details-info debug1">
-            <button class="btn btn-info">Visualizza informazioni sul sito</button>
           </div>
         </div>
       </div> <!-- / Ticket -->
