@@ -258,4 +258,47 @@ table {
   width: 100%;
   table-layout: fixed;
   text-align: left;
+  white-space: nowrap;
 }
+
+    @media screen and (max-width: 992px) {
+      table, thead, tbody, th, td, tr {
+    		display: block;
+    	}
+
+      table {
+        white-space: normal;
+      }
+
+      thead tr {
+    		position: absolute;
+    		top: -9999px;
+    		left: -9999px;
+    	}
+
+      td {
+    		/* Display row */
+    		border: none;
+    		border-bottom: 1px solid #eee;
+    		position: relative;
+    		padding-left: 65%;
+    	}
+
+    	td:before {
+    		/* Table Header */
+    		position: absolute;
+        font-weight: 700;
+    		/* Top/left */
+    		top: 0;
+    		left: 6px;
+        font-size: .6em;
+    	}
+
+      /*
+    	Label Data
+    	*/
+    	td:nth-of-type(1):before { content: "Offerta"; }
+    	td:nth-of-type(2):before { content: "Carrozza"; }
+    	td:nth-of-type(3):before { content: "Codice CP"; }
+    	td:nth-of-type(4):before { content: "Costo biglietto"; }
+    }
